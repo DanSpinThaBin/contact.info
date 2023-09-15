@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Information</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -12,19 +13,39 @@
             justify-content: center;
             align-items: center;
             background-color: #f4f4f4;
+            margin: 0;
         }
         div {
-            padding: 20px;
+            padding: 30px;
             background-color: #fff;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+            text-align: center;
+            width: 300px;
+        }
+        p {
+            margin: 10px 0;
+            font-size: 18px;
+        }
+        i {
+            margin-right: 10px;
+            color: #007BFF;
+        }
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        div:hover {
+            box-shadow: 0 0 20px rgba(0,0,0,0.15);
+            transform: scale(1.02);
+            transition: all 0.3s ease;
         }
     </style>
 </head>
 <body>
     <div>
-        <p>Email: dbona011@uottawa.ca</p>
-        <p>Phone: 6136686986</p>
+        <p><i class="fas fa-envelope"></i><a href="mailto:dbona011@uottawa.ca">Email: dbona011@uottawa.ca</a></p>
+        <p><i class="fas fa-comment-dots"></i><a href="sms:6136686986">Message: 6136686986</a></p>
     </div>
 </body>
 </html>

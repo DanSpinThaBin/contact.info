@@ -9,11 +9,11 @@
         body {
             font-family: Arial, sans-serif;
             display: flex;
-            height: 100vh;
-            justify-content: center;
+            flex-direction: column;
             align-items: center;
             background-color: #f4f4f4;
             margin: 0;
+            padding: 20px;
         }
         div {
             padding: 30px;
@@ -22,6 +22,7 @@
             box-shadow: 0 0 15px rgba(0,0,0,0.1);
             text-align: center;
             width: 300px;
+            margin-top: 20px;
         }
         p {
             margin: 10px 0;
@@ -35,17 +36,31 @@
             text-decoration: none;
             color: inherit;
         }
-        div:hover {
-            box-shadow: 0 0 20px rgba(0,0,0,0.15);
-            transform: scale(1.02);
-            transition: all 0.3s ease;
+        img {
+            width: 100px;
+            margin: 10px;
         }
     </style>
 </head>
 <body>
+    <img src="https://image.shutterstock.com/image-vector/book-icon-isolated-on-white-260nw-614132980.jpg" alt="Book">
+    <img src="https://image.shutterstock.com/image-vector/pencil-icon-vector-illustration-260nw-525959985.jpg" alt="Pencil">
     <div>
-        <p><i class="fas fa-envelope"></i><a href="mailto:dbona011@uottawa.ca">Email: dbona011@uottawa.ca</a></p>
-        <p><i class="fas fa-comment-dots"></i><a href="sms:6136686986">Message: 6136686986</a></p>
+        <p><i class="fas fa-envelope"></i><a href="mailto:dbona011@uottawa.ca?subject=Tutoring%20request" onclick="copyToClipboard('dbona011@uottawa.ca')">Email: dbona011@uottawa.ca</a></p>
+        <p><i class="fas fa-comment-dots"></i><a href="sms:6136686986&body=Tutoring%20request" onclick="copyToClipboard('6136686986')">Message: 6136686986</a></p>
     </div>
+
+    <script>
+        function copyToClipboard(text) {
+            const el = document.createElement('textarea');
+            el.value = text;
+            document.body.appendChild(el);
+            el.select();
+            document.execCommand('copy');
+            document.body.removeChild(el);
+
+            alert('Copied!');
+        }
+    </script>
 </body>
 </html>
